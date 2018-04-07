@@ -76,18 +76,44 @@
                                     <outlet property="temperatureLabel" destination="CgO-Ha-znE" id="Rv5-4a-6vj"/>
                                 </connections>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJS-z3-qGz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="HMU-ke-O5L">
+                                        <rect key="frame" x="169" y="280" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bw6-zd-kI7">
+                                        <rect key="frame" x="122" y="325" width="132" height="37"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.40278942953020136" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Bw6-zd-kI7" firstAttribute="centerX" secondItem="xJS-z3-qGz" secondAttribute="centerX" id="1nV-zI-CQL"/>
+                                    <constraint firstItem="Bw6-zd-kI7" firstAttribute="top" secondItem="HMU-ke-O5L" secondAttribute="bottom" constant="8" id="9nN-Vg-S6N"/>
+                                    <constraint firstItem="HMU-ke-O5L" firstAttribute="centerY" secondItem="xJS-z3-qGz" secondAttribute="centerY" id="OLJ-wY-aY3"/>
+                                    <constraint firstItem="HMU-ke-O5L" firstAttribute="centerX" secondItem="xJS-z3-qGz" secondAttribute="centerX" id="qpp-Ch-fhv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ua3-oN-pZd" secondAttribute="bottom" constant="20" id="Cfu-Ja-ik1"/>
+                            <constraint firstItem="Ua3-oN-pZd" firstAttribute="top" secondItem="xJS-z3-qGz" secondAttribute="bottom" id="CmF-r0-ve9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xJS-z3-qGz" secondAttribute="trailing" id="EJ5-7X-TES"/>
                             <constraint firstItem="Ua3-oN-pZd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FVy-iR-nkP"/>
                             <constraint firstItem="c9B-xM-gJl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="LAS-2Q-U6L"/>
+                            <constraint firstItem="xJS-z3-qGz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VCg-sU-mHw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c9B-xM-gJl" secondAttribute="trailing" constant="8" id="jIf-qx-50L"/>
+                            <constraint firstItem="xJS-z3-qGz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lf5-re-1Yh"/>
                             <constraint firstItem="c9B-xM-gJl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vG8-b7-r0A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hudView" destination="xJS-z3-qGz" id="cTk-Ty-8ax"/>
                         <outlet property="recordButton" destination="Ua3-oN-pZd" id="qMk-dP-2gG"/>
                         <outlet property="weatherView" destination="c9B-xM-gJl" id="vis-He-1ui"/>
                     </connections>
