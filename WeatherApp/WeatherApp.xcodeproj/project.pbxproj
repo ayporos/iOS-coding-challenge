@@ -21,10 +21,17 @@
 		0AABBFF8207875EB00FD407F /* WeatherViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFEF207875EB00FD407F /* WeatherViewInput.swift */; };
 		0AABBFF9207875EB00FD407F /* WeatherViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFF0207875EB00FD407F /* WeatherViewOutput.swift */; };
 		0AABBFFD2078761A00FD407F /* WeatherModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFFC2078761A00FD407F /* WeatherModuleBuilder.swift */; };
-		0AABC00020787A1A00FD407F /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFFF20787A1A00FD407F /* SpeechRecognition.swift */; };
-		0AABC00220787AB800FD407F /* SpeechRecognitionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC00120787AB800FD407F /* SpeechRecognitionImpl.swift */; };
-		0AABC0042078A63D00FD407F /* TranscriptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0032078A63D00FD407F /* TranscriptionParser.swift */; };
-		0AABC0062078A6C200FD407F /* TranscriptionParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0052078A6C200FD407F /* TranscriptionParserImpl.swift */; };
+		0AABC0112078B2A000FD407F /* TranscriptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC00A2078B2A000FD407F /* TranscriptionParser.swift */; };
+		0AABC0122078B2A000FD407F /* TranscriptionParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC00B2078B2A000FD407F /* TranscriptionParserImpl.swift */; };
+		0AABC0132078B2A000FD407F /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC00D2078B2A000FD407F /* SpeechRecognition.swift */; };
+		0AABC0142078B2A000FD407F /* SpeechRecognitionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC00E2078B2A000FD407F /* SpeechRecognitionImpl.swift */; };
+		0AABC0152078B2A000FD407F /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0102078B2A000FD407F /* WeatherService.swift */; };
+		0AABC01A2078B54A00FD407F /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0192078B54A00FD407F /* LocationService.swift */; };
+		0AABC01C2078B60000FD407F /* LocationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC01B2078B60000FD407F /* LocationServiceImpl.swift */; };
+		0AABC0242078CE3400FD407F /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0232078CE3400FD407F /* OpenWeatherMapService.swift */; };
+		0AABC0262078CE6D00FD407F /* OpenWeatherMapEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0252078CE6D00FD407F /* OpenWeatherMapEntity.swift */; };
+		0AABC0282078D83400FD407F /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0272078D83400FD407F /* WeatherViewModel.swift */; };
+		0AABC02A2078DAD800FD407F /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0292078DAD800FD407F /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +63,17 @@
 		0AABBFEF207875EB00FD407F /* WeatherViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewInput.swift; sourceTree = "<group>"; };
 		0AABBFF0207875EB00FD407F /* WeatherViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewOutput.swift; sourceTree = "<group>"; };
 		0AABBFFC2078761A00FD407F /* WeatherModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModuleBuilder.swift; sourceTree = "<group>"; };
-		0AABBFFF20787A1A00FD407F /* SpeechRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
-		0AABC00120787AB800FD407F /* SpeechRecognitionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionImpl.swift; sourceTree = "<group>"; };
-		0AABC0032078A63D00FD407F /* TranscriptionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionParser.swift; sourceTree = "<group>"; };
-		0AABC0052078A6C200FD407F /* TranscriptionParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionParserImpl.swift; sourceTree = "<group>"; };
+		0AABC00A2078B2A000FD407F /* TranscriptionParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranscriptionParser.swift; sourceTree = "<group>"; };
+		0AABC00B2078B2A000FD407F /* TranscriptionParserImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranscriptionParserImpl.swift; sourceTree = "<group>"; };
+		0AABC00D2078B2A000FD407F /* SpeechRecognition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
+		0AABC00E2078B2A000FD407F /* SpeechRecognitionImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionImpl.swift; sourceTree = "<group>"; };
+		0AABC0102078B2A000FD407F /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		0AABC0192078B54A00FD407F /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		0AABC01B2078B60000FD407F /* LocationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceImpl.swift; sourceTree = "<group>"; };
+		0AABC0232078CE3400FD407F /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
+		0AABC0252078CE6D00FD407F /* OpenWeatherMapEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapEntity.swift; sourceTree = "<group>"; };
+		0AABC0272078D83400FD407F /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		0AABC0292078DAD800FD407F /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				0AABBFE9207875EB00FD407F /* WeatherPresenter.swift */,
+				0AABC0272078D83400FD407F /* WeatherViewModel.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -173,6 +188,7 @@
 				0AABBFEE207875EB00FD407F /* WeatherViewController.swift */,
 				0AABBFEF207875EB00FD407F /* WeatherViewInput.swift */,
 				0AABBFF0207875EB00FD407F /* WeatherViewOutput.swift */,
+				0AABC0292078DAD800FD407F /* WeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,13 +196,58 @@
 		0AABBFFE20787A0B00FD407F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0AABBFFF20787A1A00FD407F /* SpeechRecognition.swift */,
-				0AABC00120787AB800FD407F /* SpeechRecognitionImpl.swift */,
-				0AABC0032078A63D00FD407F /* TranscriptionParser.swift */,
-				0AABC0052078A6C200FD407F /* TranscriptionParserImpl.swift */,
+				0AABC0182078B54A00FD407F /* LocationService */,
+				0AABC00C2078B2A000FD407F /* SpeechRecognition */,
+				0AABC0092078B2A000FD407F /* TranscriptionParser */,
+				0AABC00F2078B2A000FD407F /* WeatherService */,
 			);
 			name = Services;
 			path = Common/Services;
+			sourceTree = "<group>";
+		};
+		0AABC0092078B2A000FD407F /* TranscriptionParser */ = {
+			isa = PBXGroup;
+			children = (
+				0AABC00A2078B2A000FD407F /* TranscriptionParser.swift */,
+				0AABC00B2078B2A000FD407F /* TranscriptionParserImpl.swift */,
+			);
+			path = TranscriptionParser;
+			sourceTree = "<group>";
+		};
+		0AABC00C2078B2A000FD407F /* SpeechRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				0AABC00D2078B2A000FD407F /* SpeechRecognition.swift */,
+				0AABC00E2078B2A000FD407F /* SpeechRecognitionImpl.swift */,
+			);
+			path = SpeechRecognition;
+			sourceTree = "<group>";
+		};
+		0AABC00F2078B2A000FD407F /* WeatherService */ = {
+			isa = PBXGroup;
+			children = (
+				0AABC0222078CE3400FD407F /* OpenWeatherMap */,
+				0AABC0102078B2A000FD407F /* WeatherService.swift */,
+			);
+			path = WeatherService;
+			sourceTree = "<group>";
+		};
+		0AABC0182078B54A00FD407F /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				0AABC0192078B54A00FD407F /* LocationService.swift */,
+				0AABC01B2078B60000FD407F /* LocationServiceImpl.swift */,
+			);
+			path = LocationService;
+			sourceTree = "<group>";
+		};
+		0AABC0222078CE3400FD407F /* OpenWeatherMap */ = {
+			isa = PBXGroup;
+			children = (
+				0AABC0232078CE3400FD407F /* OpenWeatherMapService.swift */,
+				0AABC0252078CE6D00FD407F /* OpenWeatherMapEntity.swift */,
+			);
+			path = OpenWeatherMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,21 +353,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AABC0152078B2A000FD407F /* WeatherService.swift in Sources */,
+				0AABC0122078B2A000FD407F /* TranscriptionParserImpl.swift in Sources */,
+				0AABC0242078CE3400FD407F /* OpenWeatherMapService.swift in Sources */,
+				0AABC01C2078B60000FD407F /* LocationServiceImpl.swift in Sources */,
 				0AABBFFD2078761A00FD407F /* WeatherModuleBuilder.swift in Sources */,
+				0AABC0112078B2A000FD407F /* TranscriptionParser.swift in Sources */,
 				0AABBFC32078754200FD407F /* AppDelegate.swift in Sources */,
 				0AABBFF2207875EB00FD407F /* WeatherInteractorInput.swift in Sources */,
-				0AABC0042078A63D00FD407F /* TranscriptionParser.swift in Sources */,
-				0AABC0062078A6C200FD407F /* TranscriptionParserImpl.swift in Sources */,
+				0AABC0132078B2A000FD407F /* SpeechRecognition.swift in Sources */,
+				0AABC01A2078B54A00FD407F /* LocationService.swift in Sources */,
+				0AABC0282078D83400FD407F /* WeatherViewModel.swift in Sources */,
+				0AABC02A2078DAD800FD407F /* WeatherView.swift in Sources */,
 				0AABBFF9207875EB00FD407F /* WeatherViewOutput.swift in Sources */,
 				0AABBFF3207875EB00FD407F /* WeatherInteractorOutput.swift in Sources */,
 				0AABBFF1207875EB00FD407F /* WeatherInteractor.swift in Sources */,
 				0AABBFF4207875EB00FD407F /* WeatherPresenter.swift in Sources */,
-				0AABC00020787A1A00FD407F /* SpeechRecognition.swift in Sources */,
 				0AABBFF6207875EB00FD407F /* WeatherRouterInput.swift in Sources */,
 				0AABBFF8207875EB00FD407F /* WeatherViewInput.swift in Sources */,
-				0AABC00220787AB800FD407F /* SpeechRecognitionImpl.swift in Sources */,
 				0AABBFF5207875EB00FD407F /* WeatherRouter.swift in Sources */,
 				0AABBFF7207875EB00FD407F /* WeatherViewController.swift in Sources */,
+				0AABC0262078CE6D00FD407F /* OpenWeatherMapEntity.swift in Sources */,
+				0AABC0142078B2A000FD407F /* SpeechRecognitionImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

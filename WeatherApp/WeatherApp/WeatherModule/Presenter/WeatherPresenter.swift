@@ -49,4 +49,17 @@ final class WeatherPresenter: WeatherViewOutput, WeatherInteractorOutput {
     func didFinishWeatherFetching() {
         
     }
+    
+    func didReceive(weatherResult result: WeatherResult) {
+        switch result {
+        case .success(let model):
+            view.display(weather: model)
+        case .locationDenied:
+            print("denied")
+        case .locationUnavailable:
+            print("unavailable")
+        case .failure(let error):
+            print(error?.localizedDescription)
+        }
+    }
 }
