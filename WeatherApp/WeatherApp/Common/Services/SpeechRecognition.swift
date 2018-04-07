@@ -4,6 +4,8 @@ import Foundation
 
 enum SpeechRecognitionResult {
     case success(String)
+    case unavailable
+    case denied
     case failure(Error?)
 }
 
