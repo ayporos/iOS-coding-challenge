@@ -26,4 +26,27 @@ final class WeatherPresenter: WeatherViewOutput, WeatherInteractorOutput {
         isRecording = false
         view.updateRecordButton(title: "Start recording")
     }
+    
+    func didReceive(recognitionResult result: RecognitionResult) {
+        switch result {
+        case .weatherCommand(_, _):
+            print("weather command recognized")
+        case .unrecognizedCommand:
+            print("weather command not recognized")
+        case .denied:
+            print("denied")
+        case .unavailable:
+            print("unavailable")
+        case .failure(let error):
+            print("\(String(describing: error))")
+        }
+    }
+    
+    func didStartWeatherFetching() {
+        
+    }
+    
+    func didFinishWeatherFetching() {
+        
+    }
 }
