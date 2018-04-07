@@ -23,6 +23,8 @@
 		0AABBFFD2078761A00FD407F /* WeatherModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFFC2078761A00FD407F /* WeatherModuleBuilder.swift */; };
 		0AABC00020787A1A00FD407F /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFFF20787A1A00FD407F /* SpeechRecognition.swift */; };
 		0AABC00220787AB800FD407F /* SpeechRecognitionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC00120787AB800FD407F /* SpeechRecognitionImpl.swift */; };
+		0AABC0042078A63D00FD407F /* TranscriptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0032078A63D00FD407F /* TranscriptionParser.swift */; };
+		0AABC0062078A6C200FD407F /* TranscriptionParserImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0052078A6C200FD407F /* TranscriptionParserImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		0AABBFFC2078761A00FD407F /* WeatherModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModuleBuilder.swift; sourceTree = "<group>"; };
 		0AABBFFF20787A1A00FD407F /* SpeechRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
 		0AABC00120787AB800FD407F /* SpeechRecognitionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionImpl.swift; sourceTree = "<group>"; };
+		0AABC0032078A63D00FD407F /* TranscriptionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionParser.swift; sourceTree = "<group>"; };
+		0AABC0052078A6C200FD407F /* TranscriptionParserImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionParserImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 			children = (
 				0AABBFFF20787A1A00FD407F /* SpeechRecognition.swift */,
 				0AABC00120787AB800FD407F /* SpeechRecognitionImpl.swift */,
+				0AABC0032078A63D00FD407F /* TranscriptionParser.swift */,
+				0AABC0052078A6C200FD407F /* TranscriptionParserImpl.swift */,
 			);
 			name = Services;
 			path = Common/Services;
@@ -289,6 +295,8 @@
 				0AABBFFD2078761A00FD407F /* WeatherModuleBuilder.swift in Sources */,
 				0AABBFC32078754200FD407F /* AppDelegate.swift in Sources */,
 				0AABBFF2207875EB00FD407F /* WeatherInteractorInput.swift in Sources */,
+				0AABC0042078A63D00FD407F /* TranscriptionParser.swift in Sources */,
+				0AABC0062078A6C200FD407F /* TranscriptionParserImpl.swift in Sources */,
 				0AABBFF9207875EB00FD407F /* WeatherViewOutput.swift in Sources */,
 				0AABBFF3207875EB00FD407F /* WeatherInteractorOutput.swift in Sources */,
 				0AABBFF1207875EB00FD407F /* WeatherInteractor.swift in Sources */,
