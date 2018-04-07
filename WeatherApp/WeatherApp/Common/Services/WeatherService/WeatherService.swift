@@ -3,12 +3,18 @@
 import Foundation
 import CoreLocation
 
-enum WeatherResult {
-    case success
-    case failure(Error?)
+enum WeatherServiceError: Error {
+    case unknown
+    case api(Error?)
 }
 
-typealias WeatherServiceCompletion = (WeatherResult) -> Void
+enum WeatherServiceResult {
+    // TODO: use generic weather entity instead of openmap
+    case success(OpenWeatherMapEntity)
+    case failure(WeatherServiceError?)
+}
+
+typealias WeatherServiceCompletion = (WeatherServiceResult) -> Void
 
 protocol WeatherService {
     func fetchWeather(location: CLLocation, completion: @escaping WeatherServiceCompletion)
