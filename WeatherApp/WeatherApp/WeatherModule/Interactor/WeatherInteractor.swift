@@ -1,16 +1,21 @@
 // @copyright German Autolabs Assignment
 
 import Foundation
+import CoreLocation
 
 final class WeatherInteractor: WeatherInteractorInput {
     
     weak var output: WeatherInteractorOutput!
     private var speechRecognizer: SpeechRecognition
     private var parser: TranscriptionParser
+    private var weatherService: WeatherService
     
-    init(speechRecognizer: SpeechRecognition, parser: TranscriptionParser) {
+    init(speechRecognizer: SpeechRecognition,
+         parser: TranscriptionParser,
+         weatherService: WeatherService) {
         self.speechRecognizer = speechRecognizer
         self.parser = parser
+        self.weatherService = weatherService
         self.speechRecognizer.output = self
     }
     
@@ -58,6 +63,16 @@ extension WeatherInteractor: SpeechRecognitionOutput {
         
         // TODO: use city and date
         output.didStartWeatherFetching()
-        output.didFinishWeatherFetching()
+        let location = CLLocation(latitude: 10.1, longitude: 66.6)
+        weatherService.fetchWeather(location: location) { [weak self] result in
+            guard let strongSelf = self else { return }
+            strongSelf.output.didFinishWeatherFetching()
+            switch result {
+            case .success:
+                print("success")
+            case .failure(_):
+                print("error")
+            }
+        }
     }
 }
