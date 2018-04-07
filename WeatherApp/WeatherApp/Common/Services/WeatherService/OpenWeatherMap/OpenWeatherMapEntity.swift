@@ -14,7 +14,7 @@ struct OpenWeatherMapEntity: Decodable {
         func iconURL() -> URL? {
             guard let icon = icon else { return nil }
             return URL(string: Weather.baseIconURLString)?
-                .appendingPathComponent(icon)
+                .appendingPathComponent(icon+".png")
         }
     }
     
