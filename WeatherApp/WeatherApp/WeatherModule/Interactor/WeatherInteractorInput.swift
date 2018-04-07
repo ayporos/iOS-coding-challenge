@@ -2,5 +2,7 @@
 
 protocol WeatherInteractorInput {
     
-    func recordAndRecognize()
+    // Voice recording and recognition
+    func startRecognition()
+    func stopRecognition()
 }

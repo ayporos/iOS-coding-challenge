@@ -11,8 +11,14 @@ enum SpeechRecognitionResult {
 
 typealias SpeechRecognitionCompletion = (SpeechRecognitionResult) -> Void
 
+protocol SpeechRecognitionOutput: class {
+    func received(_ result: SpeechRecognitionResult)
+}
+
 protocol SpeechRecognition {
-    func recognize(completion: @escaping SpeechRecognitionCompletion)
+    var output: SpeechRecognitionOutput? { get set }
+    func recordAndRecognize()
+    func stop()
 }
 
 
