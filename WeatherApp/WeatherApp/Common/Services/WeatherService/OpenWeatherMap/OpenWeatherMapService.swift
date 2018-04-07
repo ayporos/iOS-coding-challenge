@@ -5,6 +5,7 @@ import CoreLocation
 
 final class OpenWeatherMapService: WeatherService {
     
+    // TODO: cache weather
     private enum Constants {
         static let baseURL = "https://api.openweathermap.org/data/2.5/weather"
         static let apiKey = "0edcad438492c1d5126e6633c6a43795"

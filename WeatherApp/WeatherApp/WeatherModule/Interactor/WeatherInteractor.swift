@@ -72,8 +72,17 @@ extension WeatherInteractor: SpeechRecognitionOutput {
     }
     
     func fetchWeather(_ location: CLLocation) {
-        weatherService.fetchWeather(location: location, completion: { result in
-            
+        weatherService.fetchWeather(location: location, completion: { [weak self] result in
+            switch result {
+            case .success(let entity):
+                let model = WeatherViewModel(name: entity.name,
+                                             temperature: entity.temperature,
+                                             description: entity.conditions?.first?.description,
+                                             conditionURL: entity.conditions?.first?.iconURL())
+                self?.output.didReceive(weatherResult: .success(model))
+            case .failure(let error):
+                self?.output.didReceive(weatherResult: .failure(error))
+            }
         })
     }
     

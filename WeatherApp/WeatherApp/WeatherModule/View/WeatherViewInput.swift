@@ -3,4 +3,5 @@
 protocol WeatherViewInput: class {
     
     func updateRecordButton(title: String)
+    func display(weather: WeatherViewModel)
 }

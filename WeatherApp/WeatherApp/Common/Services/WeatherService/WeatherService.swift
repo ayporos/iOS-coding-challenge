@@ -8,6 +8,17 @@ enum WeatherServiceError: Error {
     case api(Error?)
 }
 
+extension WeatherServiceError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .unknown:
+            return NSLocalizedString("Unknown error. Please try again later", comment: "")
+        case .api:
+            return NSLocalizedString("Service unavailable. Please try again later", comment: "")
+        }
+    }
+}
+
 enum WeatherServiceResult {
     // TODO: use generic weather entity instead of openmap
     case success(OpenWeatherMapEntity)

@@ -10,8 +10,8 @@ enum RecognitionResult {
     case failure(Error?)
 }
 
-enum FetchWeatherResult {
-    case success
+enum WeatherResult {
+    case success(WeatherViewModel)
     case locationDenied
     case locationUnavailable
     case failure(Error?)
@@ -27,5 +27,5 @@ protocol WeatherInteractorOutput: class {
     // weather fetching
     func didStartWeatherFetching()
     func didFinishWeatherFetching()
-    func didReceive(weatherResult result: FetchWeatherResult)
+    func didReceive(weatherResult result: WeatherResult)
 }

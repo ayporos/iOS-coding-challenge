@@ -3,7 +3,7 @@
 import CoreLocation
 
 final class LocationServiceImpl: NSObject, LocationService, CLLocationManagerDelegate {
-    // TODO: cash location
+    // TODO: cache location
     
     private enum Constants {
         static let freshLocation: Double = 20

@@ -30,6 +30,8 @@
 		0AABC01C2078B60000FD407F /* LocationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC01B2078B60000FD407F /* LocationServiceImpl.swift */; };
 		0AABC0242078CE3400FD407F /* OpenWeatherMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0232078CE3400FD407F /* OpenWeatherMapService.swift */; };
 		0AABC0262078CE6D00FD407F /* OpenWeatherMapEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0252078CE6D00FD407F /* OpenWeatherMapEntity.swift */; };
+		0AABC0282078D83400FD407F /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0272078D83400FD407F /* WeatherViewModel.swift */; };
+		0AABC02A2078DAD800FD407F /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0292078DAD800FD407F /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		0AABC01B2078B60000FD407F /* LocationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceImpl.swift; sourceTree = "<group>"; };
 		0AABC0232078CE3400FD407F /* OpenWeatherMapService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapService.swift; sourceTree = "<group>"; };
 		0AABC0252078CE6D00FD407F /* OpenWeatherMapEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapEntity.swift; sourceTree = "<group>"; };
+		0AABC0272078D83400FD407F /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		0AABC0292078DAD800FD407F /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				0AABBFE9207875EB00FD407F /* WeatherPresenter.swift */,
+				0AABC0272078D83400FD407F /* WeatherViewModel.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 				0AABBFEE207875EB00FD407F /* WeatherViewController.swift */,
 				0AABBFEF207875EB00FD407F /* WeatherViewInput.swift */,
 				0AABBFF0207875EB00FD407F /* WeatherViewOutput.swift */,
+				0AABC0292078DAD800FD407F /* WeatherView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -357,6 +363,8 @@
 				0AABBFF2207875EB00FD407F /* WeatherInteractorInput.swift in Sources */,
 				0AABC0132078B2A000FD407F /* SpeechRecognition.swift in Sources */,
 				0AABC01A2078B54A00FD407F /* LocationService.swift in Sources */,
+				0AABC0282078D83400FD407F /* WeatherViewModel.swift in Sources */,
+				0AABC02A2078DAD800FD407F /* WeatherView.swift in Sources */,
 				0AABBFF9207875EB00FD407F /* WeatherViewOutput.swift in Sources */,
 				0AABBFF3207875EB00FD407F /* WeatherInteractorOutput.swift in Sources */,
 				0AABBFF1207875EB00FD407F /* WeatherInteractor.swift in Sources */,
