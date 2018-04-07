@@ -49,4 +49,8 @@ final class WeatherPresenter: WeatherViewOutput, WeatherInteractorOutput {
     func didFinishWeatherFetching() {
         
     }
+    
+    func didReceive(weatherResult result: FetchWeatherResult) {
+        
+    }
 }

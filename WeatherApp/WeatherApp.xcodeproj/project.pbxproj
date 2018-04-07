@@ -27,6 +27,8 @@
 		0AABC0142078B2A000FD407F /* SpeechRecognitionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC00E2078B2A000FD407F /* SpeechRecognitionImpl.swift */; };
 		0AABC0152078B2A000FD407F /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0102078B2A000FD407F /* WeatherService.swift */; };
 		0AABC0172078B30D00FD407F /* WeatherServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0162078B30D00FD407F /* WeatherServiceImpl.swift */; };
+		0AABC01A2078B54A00FD407F /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0192078B54A00FD407F /* LocationService.swift */; };
+		0AABC01C2078B60000FD407F /* LocationServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC01B2078B60000FD407F /* LocationServiceImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		0AABC00E2078B2A000FD407F /* SpeechRecognitionImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionImpl.swift; sourceTree = "<group>"; };
 		0AABC0102078B2A000FD407F /* WeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		0AABC0162078B30D00FD407F /* WeatherServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServiceImpl.swift; sourceTree = "<group>"; };
+		0AABC0192078B54A00FD407F /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		0AABC01B2078B60000FD407F /* LocationServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,7 @@
 		0AABBFFE20787A0B00FD407F /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0AABC0182078B54A00FD407F /* LocationService */,
 				0AABC00C2078B2A000FD407F /* SpeechRecognition */,
 				0AABC0092078B2A000FD407F /* TranscriptionParser */,
 				0AABC00F2078B2A000FD407F /* WeatherService */,
@@ -217,6 +222,15 @@
 				0AABC0162078B30D00FD407F /* WeatherServiceImpl.swift */,
 			);
 			path = WeatherService;
+			sourceTree = "<group>";
+		};
+		0AABC0182078B54A00FD407F /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				0AABC0192078B54A00FD407F /* LocationService.swift */,
+				0AABC01B2078B60000FD407F /* LocationServiceImpl.swift */,
+			);
+			path = LocationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,12 +338,14 @@
 			files = (
 				0AABC0152078B2A000FD407F /* WeatherService.swift in Sources */,
 				0AABC0122078B2A000FD407F /* TranscriptionParserImpl.swift in Sources */,
+				0AABC01C2078B60000FD407F /* LocationServiceImpl.swift in Sources */,
 				0AABBFFD2078761A00FD407F /* WeatherModuleBuilder.swift in Sources */,
 				0AABC0112078B2A000FD407F /* TranscriptionParser.swift in Sources */,
 				0AABC0172078B30D00FD407F /* WeatherServiceImpl.swift in Sources */,
 				0AABBFC32078754200FD407F /* AppDelegate.swift in Sources */,
 				0AABBFF2207875EB00FD407F /* WeatherInteractorInput.swift in Sources */,
 				0AABC0132078B2A000FD407F /* SpeechRecognition.swift in Sources */,
+				0AABC01A2078B54A00FD407F /* LocationService.swift in Sources */,
 				0AABBFF9207875EB00FD407F /* WeatherViewOutput.swift in Sources */,
 				0AABBFF3207875EB00FD407F /* WeatherInteractorOutput.swift in Sources */,
 				0AABBFF1207875EB00FD407F /* WeatherInteractor.swift in Sources */,

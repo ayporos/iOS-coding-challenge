@@ -10,6 +10,13 @@ enum RecognitionResult {
     case failure(Error?)
 }
 
+enum FetchWeatherResult {
+    case success
+    case locationDenied
+    case locationUnavailable
+    case failure(Error?)
+}
+
 protocol WeatherInteractorOutput: class {
     
     // voice recognition
@@ -20,4 +27,5 @@ protocol WeatherInteractorOutput: class {
     // weather fetching
     func didStartWeatherFetching()
     func didFinishWeatherFetching()
+    func didReceive(weatherResult result: FetchWeatherResult)
 }

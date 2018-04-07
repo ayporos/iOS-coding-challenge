@@ -9,13 +9,16 @@ final class WeatherInteractor: WeatherInteractorInput {
     private var speechRecognizer: SpeechRecognition
     private var parser: TranscriptionParser
     private var weatherService: WeatherService
+    private var locationService: LocationService
     
     init(speechRecognizer: SpeechRecognition,
          parser: TranscriptionParser,
-         weatherService: WeatherService) {
+         weatherService: WeatherService,
+         locationService: LocationService) {
         self.speechRecognizer = speechRecognizer
         self.parser = parser
         self.weatherService = weatherService
+        self.locationService = locationService
         self.speechRecognizer.output = self
     }
     
@@ -53,6 +56,9 @@ extension WeatherInteractor: SpeechRecognitionOutput {
         }
         
         switch command {
+        case .weather(city: .none, date: .none):
+            output.didReceive(recognitionResult: .weatherCommand(city: nil, date: nil))
+            fetchCurrentLocationWeather()
         case .weather(let city, let date):
             output.didReceive(recognitionResult: .weatherCommand(city: city, date: date))
             fetchWeather(city: city, date: date)
@@ -61,18 +67,36 @@ extension WeatherInteractor: SpeechRecognitionOutput {
     
     func fetchWeather(city: String?, date: Date?) {
         
-        // TODO: use city and date
+        // TODO: fetch weather in the city at date
         output.didStartWeatherFetching()
-        let location = CLLocation(latitude: 10.1, longitude: 66.6)
-        weatherService.fetchWeather(location: location) { [weak self] result in
-            guard let strongSelf = self else { return }
-            strongSelf.output.didFinishWeatherFetching()
-            switch result {
-            case .success:
-                print("success")
-            case .failure(_):
-                print("error")
-            }
+    }
+    
+    func fetchWeather(_ location: CLLocation) {
+        weatherService.fetchWeather(location: location, completion: { result in
+            
+        })
+    }
+    
+    func fetchCurrentLocationWeather() {
+        locationService.fetchLocation { [weak self] result in
+            self?.handle(locationResult: result)
+        }
+    }
+    
+    // MARK: - Handlers
+    func handle(locationResult: LocationServiceResult) {
+        switch locationResult {
+        case .success(let location):
+            fetchWeather(location)
+        case .denied:
+            output.didFinishWeatherFetching()
+            output.didReceive(weatherResult: .locationDenied)
+        case .unavailable:
+            output.didFinishWeatherFetching()
+            output.didReceive(weatherResult: .locationUnavailable)
+        case .failure(let error):
+            output.didFinishWeatherFetching()
+            output.didReceive(weatherResult: .failure(error))
         }
     }
 }
