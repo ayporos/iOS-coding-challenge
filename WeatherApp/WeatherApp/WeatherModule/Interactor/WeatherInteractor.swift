@@ -48,7 +48,9 @@ extension WeatherInteractor: SpeechRecognitionOutput {
             output.didReceive(recognitionResult: .failure(.unknown(error)))
         }
     }
-    
+}
+
+private extension WeatherInteractor {
     func parse(transcription: String) {
         guard let command = parser.parse(transcription: transcription) else {
             output.didReceive(recognitionResult: .failure(.unrecognizedCommand))

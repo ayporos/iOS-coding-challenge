@@ -1,0 +1,42 @@
+{
+    "coord": {
+        "lon": 100.57,
+        "lat": 13.74
+    },
+    "weather": [
+                {
+                "id": 500,
+                "main": "Rain",
+                "description": "light rain",
+                "icon": "10d"
+                }
+                ],
+    "base": "stations",
+    "main": {
+        "temp": 25.5,
+        "pressure": 1012,
+        "humidity": 73,
+        "temp_min": 25,
+        "temp_max": 26
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 6.2,
+        "deg": 10
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1523095200,
+    "sys": {
+        "type": 1,
+        "id": 7917,
+        "message": 0.0063,
+        "country": "TH",
+        "sunrise": 1523056179,
+        "sunset": 1523100608
+    },
+    "id": 6695671,
+    "name": "Sukhumvit",
+    "cod": 200
+}
