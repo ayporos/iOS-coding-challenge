@@ -15,7 +15,7 @@ final class WeatherModuleBuilder: NSObject {
         presenter.view = viewController
         presenter.router = router
         
-        let interactor = WeatherInteractor()
+        let interactor = WeatherInteractor(speechRecognizer: SpeechRecognitionImpl())
         interactor.output = presenter
         
         presenter.interactor = interactor
