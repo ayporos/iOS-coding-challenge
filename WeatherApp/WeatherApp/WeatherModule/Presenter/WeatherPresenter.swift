@@ -1,5 +1,7 @@
 // @copyright German Autolabs Assignment
 
+import Foundation
+
 final class WeatherPresenter: WeatherViewOutput, WeatherInteractorOutput {
     
     weak var view: WeatherViewInput!
@@ -30,36 +32,30 @@ final class WeatherPresenter: WeatherViewOutput, WeatherInteractorOutput {
     func didReceive(recognitionResult result: RecognitionResult) {
         switch result {
         case .weatherCommand(_, _):
-            print("weather command recognized")
-        case .unrecognizedCommand:
-            print("weather command not recognized")
-        case .denied:
-            print("denied")
-        case .unavailable:
-            print("unavailable")
+            break
         case .failure(let error):
-            print("\(String(describing: error))")
+            if let message = error?.localizedDescription {
+                view.display(message: message)
+            }
         }
     }
     
     func didStartWeatherFetching() {
-        
+        view.displayHUD()
     }
     
     func didFinishWeatherFetching() {
-        
+        view.hideHUD()
     }
     
     func didReceive(weatherResult result: WeatherResult) {
         switch result {
         case .success(let model):
             view.display(weather: model)
-        case .locationDenied:
-            print("denied")
-        case .locationUnavailable:
-            print("unavailable")
         case .failure(let error):
-            print(error?.localizedDescription)
+            if let message = error?.localizedDescription {
+                view.display(message: message)
+            }
         }
     }
 }

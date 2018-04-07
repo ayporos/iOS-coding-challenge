@@ -41,17 +41,17 @@ extension WeatherInteractor: SpeechRecognitionOutput {
         case .success(let transcription):
             parse(transcription: transcription)
         case .denied:
-            output.didReceive(recognitionResult: .denied)
+            output.didReceive(recognitionResult: .failure(.denied))
         case .unavailable:
-            output.didReceive(recognitionResult: .unavailable)
+            output.didReceive(recognitionResult: .failure(.unavailable))
         case .failure(let error):
-            output.didReceive(recognitionResult: .failure(error))
+            output.didReceive(recognitionResult: .failure(.unknown(error)))
         }
     }
     
     func parse(transcription: String) {
         guard let command = parser.parse(transcription: transcription) else {
-            output.didReceive(recognitionResult: .unrecognizedCommand)
+            output.didReceive(recognitionResult: .failure(.unrecognizedCommand))
             return
         }
         
@@ -73,6 +73,7 @@ extension WeatherInteractor: SpeechRecognitionOutput {
     
     func fetchWeather(_ location: CLLocation) {
         weatherService.fetchWeather(location: location, completion: { [weak self] result in
+            self?.output.didFinishWeatherFetching()
             switch result {
             case .success(let entity):
                 let model = WeatherViewModel(name: entity.name,
@@ -81,12 +82,13 @@ extension WeatherInteractor: SpeechRecognitionOutput {
                                              conditionURL: entity.conditions?.first?.iconURL())
                 self?.output.didReceive(weatherResult: .success(model))
             case .failure(let error):
-                self?.output.didReceive(weatherResult: .failure(error))
+                self?.output.didReceive(weatherResult: .failure(.unknown(error)))
             }
         })
     }
     
     func fetchCurrentLocationWeather() {
+        output.didStartWeatherFetching()
         locationService.fetchLocation { [weak self] result in
             self?.handle(locationResult: result)
         }
@@ -99,13 +101,13 @@ extension WeatherInteractor: SpeechRecognitionOutput {
             fetchWeather(location)
         case .denied:
             output.didFinishWeatherFetching()
-            output.didReceive(weatherResult: .locationDenied)
+            output.didReceive(weatherResult: .failure(.locationDenied))
         case .unavailable:
             output.didFinishWeatherFetching()
-            output.didReceive(weatherResult: .locationUnavailable)
+            output.didReceive(weatherResult: .failure(.locationUnavailable))
         case .failure(let error):
             output.didFinishWeatherFetching()
-            output.didReceive(weatherResult: .failure(error))
+            output.didReceive(weatherResult: .failure(.unknown(error)))
         }
     }
 }
