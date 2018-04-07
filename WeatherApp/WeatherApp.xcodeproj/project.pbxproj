@@ -21,6 +21,8 @@
 		0AABBFF8207875EB00FD407F /* WeatherViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFEF207875EB00FD407F /* WeatherViewInput.swift */; };
 		0AABBFF9207875EB00FD407F /* WeatherViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFF0207875EB00FD407F /* WeatherViewOutput.swift */; };
 		0AABBFFD2078761A00FD407F /* WeatherModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFFC2078761A00FD407F /* WeatherModuleBuilder.swift */; };
+		0AABC00020787A1A00FD407F /* SpeechRecognition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFFF20787A1A00FD407F /* SpeechRecognition.swift */; };
+		0AABC00220787AB800FD407F /* SpeechRecognitionImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC00120787AB800FD407F /* SpeechRecognitionImpl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		0AABBFEF207875EB00FD407F /* WeatherViewInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewInput.swift; sourceTree = "<group>"; };
 		0AABBFF0207875EB00FD407F /* WeatherViewOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewOutput.swift; sourceTree = "<group>"; };
 		0AABBFFC2078761A00FD407F /* WeatherModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModuleBuilder.swift; sourceTree = "<group>"; };
+		0AABBFFF20787A1A00FD407F /* SpeechRecognition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognition.swift; sourceTree = "<group>"; };
+		0AABC00120787AB800FD407F /* SpeechRecognitionImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionImpl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 		0AABBFC12078754200FD407F /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				0AABBFFE20787A0B00FD407F /* Services */,
 				0AABBFE2207875EB00FD407F /* WeatherModule */,
 				0AABBFC22078754200FD407F /* AppDelegate.swift */,
 				0AABBFC62078754200FD407F /* Main.storyboard */,
@@ -166,6 +171,16 @@
 				0AABBFF0207875EB00FD407F /* WeatherViewOutput.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0AABBFFE20787A0B00FD407F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0AABBFFF20787A1A00FD407F /* SpeechRecognition.swift */,
+				0AABC00120787AB800FD407F /* SpeechRecognitionImpl.swift */,
+			);
+			name = Services;
+			path = Common/Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,8 +293,10 @@
 				0AABBFF3207875EB00FD407F /* WeatherInteractorOutput.swift in Sources */,
 				0AABBFF1207875EB00FD407F /* MovieSearchInteractor.swift in Sources */,
 				0AABBFF4207875EB00FD407F /* WeatherPresenter.swift in Sources */,
+				0AABC00020787A1A00FD407F /* SpeechRecognition.swift in Sources */,
 				0AABBFF6207875EB00FD407F /* WeatherRouterInput.swift in Sources */,
 				0AABBFF8207875EB00FD407F /* WeatherViewInput.swift in Sources */,
+				0AABC00220787AB800FD407F /* SpeechRecognitionImpl.swift in Sources */,
 				0AABBFF5207875EB00FD407F /* WeatherRouter.swift in Sources */,
 				0AABBFF7207875EB00FD407F /* WeatherViewController.swift in Sources */,
 			);
