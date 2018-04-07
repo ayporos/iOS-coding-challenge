@@ -11,7 +11,7 @@
 		0AABBFC82078754200FD407F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AABBFC62078754200FD407F /* Main.storyboard */; };
 		0AABBFCA2078754200FD407F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AABBFC92078754200FD407F /* Assets.xcassets */; };
 		0AABBFCD2078754200FD407F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AABBFCB2078754200FD407F /* LaunchScreen.storyboard */; };
-		0AABBFF1207875EB00FD407F /* MovieSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFE5207875EB00FD407F /* MovieSearchInteractor.swift */; };
+		0AABBFF1207875EB00FD407F /* WeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFE5207875EB00FD407F /* WeatherInteractor.swift */; };
 		0AABBFF2207875EB00FD407F /* WeatherInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFE6207875EB00FD407F /* WeatherInteractorInput.swift */; };
 		0AABBFF3207875EB00FD407F /* WeatherInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFE7207875EB00FD407F /* WeatherInteractorOutput.swift */; };
 		0AABBFF4207875EB00FD407F /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABBFE9207875EB00FD407F /* WeatherPresenter.swift */; };
@@ -44,7 +44,7 @@
 		0AABBFCE2078754200FD407F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AABBFD32078754200FD407F /* WeatherAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AABBFD92078754200FD407F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0AABBFE5207875EB00FD407F /* MovieSearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchInteractor.swift; sourceTree = "<group>"; };
+		0AABBFE5207875EB00FD407F /* WeatherInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherInteractor.swift; sourceTree = "<group>"; };
 		0AABBFE6207875EB00FD407F /* WeatherInteractorInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherInteractorInput.swift; sourceTree = "<group>"; };
 		0AABBFE7207875EB00FD407F /* WeatherInteractorOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherInteractorOutput.swift; sourceTree = "<group>"; };
 		0AABBFE9207875EB00FD407F /* WeatherPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		0AABBFE4207875EB00FD407F /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				0AABBFE5207875EB00FD407F /* MovieSearchInteractor.swift */,
+				0AABBFE5207875EB00FD407F /* WeatherInteractor.swift */,
 				0AABBFE6207875EB00FD407F /* WeatherInteractorInput.swift */,
 				0AABBFE7207875EB00FD407F /* WeatherInteractorOutput.swift */,
 			);
@@ -291,7 +291,7 @@
 				0AABBFF2207875EB00FD407F /* WeatherInteractorInput.swift in Sources */,
 				0AABBFF9207875EB00FD407F /* WeatherViewOutput.swift in Sources */,
 				0AABBFF3207875EB00FD407F /* WeatherInteractorOutput.swift in Sources */,
-				0AABBFF1207875EB00FD407F /* MovieSearchInteractor.swift in Sources */,
+				0AABBFF1207875EB00FD407F /* WeatherInteractor.swift in Sources */,
 				0AABBFF4207875EB00FD407F /* WeatherPresenter.swift in Sources */,
 				0AABC00020787A1A00FD407F /* SpeechRecognition.swift in Sources */,
 				0AABBFF6207875EB00FD407F /* WeatherRouterInput.swift in Sources */,

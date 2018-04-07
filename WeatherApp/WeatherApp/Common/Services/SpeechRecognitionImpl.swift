@@ -72,6 +72,8 @@ private extension SpeechRecognitionImpl {
         guard let recognizer = recognizer else { fatalError("Recording started without recognizer available") }
         recognitionTask = recognizer.recognitionTask(with: recognitionRequest) { result, error in
             // TODO:
+            guard let transcription = result?.bestTranscription else { return }
+            completion(.success(transcription.formattedString))
         }
         
         let recordingFormat = inputNode.outputFormat(forBus: 0)

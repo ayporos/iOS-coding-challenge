@@ -8,7 +8,7 @@ final class WeatherPresenter: WeatherViewOutput, WeatherInteractorOutput {
     
     // MARK: WeatherViewOutput
     func didTapOnRecord() {
-        // TODO:
+        interactor.recordAndRecognize()
     }
     
     // MARK: WeatherInteractorOutput
