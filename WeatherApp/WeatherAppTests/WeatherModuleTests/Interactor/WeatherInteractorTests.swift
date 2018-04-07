@@ -132,25 +132,30 @@ final class WeatherInteractorTests: XCTestCase {
                        .didReceiveWeatherResult(.failure(.unknown(apiError))))
     }
     
-    func testReceiveWeatherServiceSuccess() {
-        // TODO:
-//        // given
-//        let error = NSError(domain: "test", code: 1, userInfo: nil)
-//        parser.mockResult = .weather(city: nil, date: nil)
-//        locationService.mockResult = .success(CLLocation(latitude: 10, longitude: 10))
-////        weatherService.mockResult = .success(weatherService
-//        // when
-//        interactor.received(.success("test"))
-//        // then
-//        XCTAssertEqual(output.invocations[0],
-//                       .didFinishRecognition)
-//        XCTAssertEqual(output.invocations[1],
-//                       .didReceiveRecognitionResult(.weatherCommand(city: nil, date: nil)))
-//        XCTAssertEqual(output.invocations[2],
-//                       .didStartWeatherFetching)
-//        XCTAssertEqual(output.invocations[3],
-//                       .didFinishWeatherFetching)
-//        XCTAssertEqual(output.invocations[4],
-//                       .didReceiveWeatherResult(.failure(.unknown(apiError))))
+    func testReceiveWeatherServiceSuccess() throws {
+        // given
+        let entity = try generateEntity()!
+        parser.mockResult = .weather(city: nil, date: nil)
+        locationService.mockResult = .success(CLLocation(latitude: 10, longitude: 10))
+        weatherService.mockResult = .success(entity)
+        // when
+        interactor.received(.success("test"))
+        // then
+        XCTAssertEqual(output.invocations[0],
+                       .didFinishRecognition)
+        XCTAssertEqual(output.invocations[1],
+                       .didReceiveRecognitionResult(.weatherCommand(city: nil, date: nil)))
+        XCTAssertEqual(output.invocations[2],
+                       .didStartWeatherFetching)
+        XCTAssertEqual(output.invocations[3],
+                       .didFinishWeatherFetching)
+        if case let .didReceiveWeatherResult(.success(model)) = output.invocations[4] {
+            XCTAssertEqual(model.name, entity.name)
+            XCTAssertEqual(model.description, entity.conditions?.first?.description)
+            XCTAssertEqual(model.temperature, entity.temperature)
+            XCTAssertEqual(model.conditionURL, entity.conditions?.first?.iconURL())
+        } else {
+            XCTFail()
+        }
     }
 }
