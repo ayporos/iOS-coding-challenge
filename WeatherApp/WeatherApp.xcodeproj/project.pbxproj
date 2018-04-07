@@ -43,6 +43,9 @@
 		0AABC0412078EE7D00FD407F /* MockTranscriptionParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0402078EE7D00FD407F /* MockTranscriptionParser.swift */; };
 		0AABC0432078EEF500FD407F /* MockWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0422078EEF500FD407F /* MockWeatherService.swift */; };
 		0AABC0452078EF7200FD407F /* MockLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0442078EF7200FD407F /* MockLocationService.swift */; };
+		0AABC0472078F95700FD407F /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 0AABC0462078F95700FD407F /* weather.json */; };
+		0AABC0492078F97B00FD407F /* WeatherEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC0482078F97B00FD407F /* WeatherEntityTests.swift */; };
+		0AABC04B2078FA7800FD407F /* WeatherEntityGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AABC04A2078FA7800FD407F /* WeatherEntityGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,9 @@
 		0AABC0402078EE7D00FD407F /* MockTranscriptionParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTranscriptionParser.swift; sourceTree = "<group>"; };
 		0AABC0422078EEF500FD407F /* MockWeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWeatherService.swift; sourceTree = "<group>"; };
 		0AABC0442078EF7200FD407F /* MockLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocationService.swift; sourceTree = "<group>"; };
+		0AABC0462078F95700FD407F /* weather.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
+		0AABC0482078F97B00FD407F /* WeatherEntityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherEntityTests.swift; sourceTree = "<group>"; };
+		0AABC04A2078FA7800FD407F /* WeatherEntityGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherEntityGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,8 +157,11 @@
 		0AABBFD62078754200FD407F /* WeatherAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				0AABC0462078F95700FD407F /* weather.json */,
 				0AABC02D2078E73600FD407F /* WeatherModuleTests */,
+				0AABC0482078F97B00FD407F /* WeatherEntityTests.swift */,
 				0AABC02B2078E70000FD407F /* FakeEquatable.swift */,
+				0AABC04A2078FA7800FD407F /* WeatherEntityGenerator.swift */,
 				0AABBFD92078754200FD407F /* Info.plist */,
 			);
 			path = WeatherAppTests;
@@ -417,6 +426,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AABC0472078F95700FD407F /* weather.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,12 +471,14 @@
 				0AABC0432078EEF500FD407F /* MockWeatherService.swift in Sources */,
 				0AABC03C2078E73600FD407F /* MockWeatherView.swift in Sources */,
 				0AABC03A2078E73600FD407F /* MockWeatherInteractor.swift in Sources */,
+				0AABC04B2078FA7800FD407F /* WeatherEntityGenerator.swift in Sources */,
 				0AABC03B2078E73600FD407F /* MockWeatherInteractorOutput.swift in Sources */,
 				0AABC0452078EF7200FD407F /* MockLocationService.swift in Sources */,
 				0AABC03D2078E73600FD407F /* WeatherPresenterTests.swift in Sources */,
 				0AABC0382078E73600FD407F /* WeatherModuleBuilderTests.swift in Sources */,
 				0AABC02C2078E70000FD407F /* FakeEquatable.swift in Sources */,
 				0AABC0412078EE7D00FD407F /* MockTranscriptionParser.swift in Sources */,
+				0AABC0492078F97B00FD407F /* WeatherEntityTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +624,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QQMWS748C;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -627,6 +640,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QQMWS748C;
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -642,11 +656,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QQMWS748C;
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "gal-assignment.WeatherAppTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherApp.app/WeatherApp";
@@ -658,7 +675,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8QQMWS748C;
 				INFOPLIST_FILE = WeatherAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "gal-assignment.WeatherAppTests";
